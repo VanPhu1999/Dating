@@ -261,7 +261,7 @@ body::before {
     gap: 1.5rem;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     margin-top: 3rem;
 }
 
@@ -329,19 +329,18 @@ button span {
 
 /* NO Button - Secondary (Dodging) */
 .no-button {
-    background: rgba(255, 255, 255, 0.1);
+    background: linear-gradient(135deg, var(--red-gradient-start), var(--secondary-pink));
     color: white;
     border: 2px solid rgba(255, 64, 129, 0.3);
     backdrop-filter: blur(10px);
-    position: absolute;
+    position: relative;
     transition: all 0.2s ease;
     min-width: 150px;
 }
 
 .no-button:hover {
-    background: rgba(255, 64, 129, 0.2);
-    border-color: var(--secondary-pink);
-    transform: scale(1.05);
+    transform: scale(1.1) rotate(-2deg);
+    box-shadow: var(--glow-strong);
 }
 
 .no-button.shrink {
@@ -403,6 +402,185 @@ button span {
     line-height: 1.8;
     margin-bottom: 3rem;
     opacity: 0.95;
+}
+
+.date-options {
+    width: min(100%, 780px);
+    margin: 0 auto 2rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(14px);
+}
+
+.option-section + .option-section {
+    margin-top: 2rem;
+}
+
+.option-title {
+    margin-bottom: 1rem;
+    color: var(--text-pink);
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+
+.choice-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 0.85rem;
+}
+
+.choice-card {
+    min-height: 58px;
+    padding: 0.9rem 1rem;
+    border-radius: 14px;
+    border: 2px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.09);
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    box-shadow: none;
+    animation: none;
+}
+
+.choice-card:hover,
+.choice-card.selected {
+    border-color: var(--secondary-pink);
+    background: linear-gradient(135deg, rgba(255, 8, 68, 0.8), rgba(255, 64, 129, 0.85));
+    box-shadow: 0 10px 28px rgba(255, 64, 129, 0.28);
+    transform: translateY(-2px);
+}
+
+.other-food-input {
+    display: none;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1rem 1.2rem;
+    border: 2px solid rgba(255, 64, 129, 0.45);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font: inherit;
+    outline: none;
+}
+
+.other-food-input::placeholder {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.other-food-input.visible {
+    display: block;
+}
+
+.schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.schedule-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.schedule-field input {
+    width: 100%;
+    padding: 1rem 1.2rem;
+    border: 2px solid rgba(255, 64, 129, 0.45);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font: inherit;
+    outline: none;
+}
+
+.schedule-field input:focus {
+    border-color: var(--secondary-pink);
+    box-shadow: 0 0 0 4px rgba(255, 64, 129, 0.18);
+}
+
+.date-summary {
+    margin-top: 2rem;
+    padding: 1rem 1.25rem;
+    border-radius: 16px;
+    background: rgba(255, 64, 129, 0.14);
+    border: 1px solid rgba(255, 64, 129, 0.35);
+    color: white;
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.submit-plan-button {
+    margin-top: 1.5rem;
+    width: min(100%, 500px);
+    background: linear-gradient(135deg, var(--red-gradient-start), var(--secondary-pink));
+    color: white;
+    font-size: 1.1rem;
+    box-shadow: 0 12px 34px rgba(255, 64, 129, 0.35);
+}
+
+.submit-plan-button:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 16px 42px rgba(255, 64, 129, 0.5);
+}
+
+.submit-plan-button:disabled {
+    cursor: wait;
+    opacity: 0.75;
+    transform: none;
+}
+
+.success-popup {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    background: rgba(10, 1, 24, 0.72);
+    backdrop-filter: blur(10px);
+}
+
+.success-popup.visible {
+    display: flex;
+}
+
+.success-popup-card {
+    width: min(100%, 420px);
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(26, 11, 46, 0.98), rgba(90, 18, 70, 0.96));
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+    text-align: center;
+}
+
+.success-popup-card h2 {
+    margin-bottom: 0.75rem;
+    color: var(--text-pink);
+    font-size: 2rem;
+}
+
+.success-popup-card p {
+    margin-bottom: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+}
+
+.popup-ok-button {
+    min-width: 140px;
+    padding: 0.9rem 2rem;
+    background: linear-gradient(135deg, var(--accent-pink), var(--secondary-pink));
+    color: white;
+    font-size: 1.05rem;
 }
 
 .love-message {
@@ -1245,10 +1423,23 @@ button span {
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
     .button-container {
-        flex-direction: column;
-        gap: 1rem;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 0.75rem;
     }
     
+    .button-container .yes-button,
+    .button-container .no-button {
+        flex: 1 1 0;
+        min-width: 0;
+        padding: 1rem 0.75rem !important;
+        font-size: 1.1rem !important;
+    }
+
+    .schedule-grid {
+        grid-template-columns: 1fr;
+    }
+
     .no-button {
         position: relative;
     }

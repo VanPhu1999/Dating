@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Be My Valentine? 💕</title>
+    <title>Will you hangout with me? 💕</title>
     <meta name="description" content="A special Valentine's Day message for someone special">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,11 +13,11 @@
 <body>
     <!-- Background Music -->
     <audio id="bgMusic" loop preload="auto">
-        <source src="romantic-music.mp3" type="audio/mpeg">
+        <source src="music.mp3" type="audio/mpeg">
     </audio>
     
     <!-- Music Control Button -->
-    <button class="music-toggle" id="musicToggle" title="Toggle Music">
+    <button class="music-toggle" id="musicToggle" title="Toggle Music" style="display: none">
         🎵
     </button>
     
@@ -26,43 +26,39 @@
     
     <!-- Romantic Names Background -->
     <div class="names-background">
-        <span class="name-text" style="top: 5%; left: 10%; transform: rotate(-15deg); font-size: 2rem; opacity: 0.22;">Peru</span>
-        <span class="name-text" style="top: 15%; left: 80%; transform: rotate(25deg); font-size: 1.5rem; opacity: 0.18;">indru</span>
-        <span class="name-text" style="top: 25%; left: 5%; transform: rotate(180deg); font-size: 1.8rem; opacity: 0.20;">darlingghhh</span>
-        <span class="name-text" style="top: 35%; left: 70%; transform: rotate(-45deg); font-size: 2.2rem; opacity: 0.19;">sweetheart</span>
-        <span class="name-text" style="top: 45%; left: 15%; transform: rotate(90deg); font-size: 1.6rem; opacity: 0.23;">mera babyyyy</span>
-        <span class="name-text" style="top: 55%; left: 85%; transform: rotate(-120deg); font-size: 2rem; opacity: 0.21;">mera pyaar..</span>
-        <span class="name-text" style="top: 65%; left: 30%; transform: rotate(45deg); font-size: 2.5rem; opacity: 0.25;">dev ki rani indrani</span>
-        <span class="name-text" style="top: 75%; left: 60%; transform: rotate(-90deg); font-size: 1.4rem; opacity: 0.18;">Peru</span>
-        <span class="name-text" style="top: 85%; left: 20%; transform: rotate(160deg); font-size: 1.9rem; opacity: 0.22;">indru</span>
-        <span class="name-text" style="top: 10%; left: 45%; transform: rotate(-60deg); font-size: 1.7rem; opacity: 0.20;">darlingghhh</span>
-        <span class="name-text" style="top: 20%; left: 25%; transform: rotate(120deg); font-size: 2.1rem; opacity: 0.24;">sweetheart</span>
-        <span class="name-text" style="top: 30%; left: 90%; transform: rotate(-30deg); font-size: 1.5rem; opacity: 0.19;">mera babyyyy</span>
-        <span class="name-text" style="top: 40%; left: 50%; transform: rotate(75deg); font-size: 2.3rem; opacity: 0.25;">mera pyaar..</span>
-        <span class="name-text" style="top: 50%; left: 8%; transform: rotate(-150deg); font-size: 1.8rem; opacity: 0.21;">dev ki rani indrani</span>
-        <span class="name-text" style="top: 60%; left: 75%; transform: rotate(30deg); font-size: 2rem; opacity: 0.23;">Peru</span>
-        <span class="name-text" style="top: 70%; left: 40%; transform: rotate(-75deg); font-size: 1.6rem; opacity: 0.19;">indru</span>
-        <span class="name-text" style="top: 80%; left: 95%; transform: rotate(135deg); font-size: 2.2rem; opacity: 0.24;">darlingghhh</span>
-        <span class="name-text" style="top: 90%; left: 55%; transform: rotate(-105deg); font-size: 1.9rem; opacity: 0.20;">sweetheart</span>
-        <span class="name-text" style="top: 8%; left: 65%; transform: rotate(60deg); font-size: 2.4rem; opacity: 0.25;">mera babyyyy</span>
-        <span class="name-text" style="top: 18%; left: 35%; transform: rotate(-45deg); font-size: 1.7rem; opacity: 0.18;">mera pyaar..</span>
-        <span class="name-text" style="top: 28%; left: 12%; transform: rotate(150deg); font-size: 2.1rem; opacity: 0.22;">dev ki rani indrani</span>
-        <span class="name-text" style="top: 38%; left: 88%; transform: rotate(-90deg); font-size: 1.5rem; opacity: 0.20;">Peru</span>
-        <span class="name-text" style="top: 48%; left: 42%; transform: rotate(45deg); font-size: 2rem; opacity: 0.23;">indru</span>
-        <span class="name-text" style="top: 58%; left: 22%; transform: rotate(-165deg); font-size: 1.8rem; opacity: 0.19;">darlingghhh</span>
-        <span class="name-text" style="top: 68%; left: 78%; transform: rotate(105deg); font-size: 2.3rem; opacity: 0.24;">sweetheart</span>
-        <span class="name-text" style="top: 78%; left: 48%; transform: rotate(-30deg); font-size: 1.6rem; opacity: 0.21;">mera babyyyy</span>
-        <span class="name-text" style="top: 88%; left: 85%; transform: rotate(90deg); font-size: 2.2rem; opacity: 0.22;">mera pyaar..</span>
-        <span class="name-text" style="top: 12%; left: 58%; transform: rotate(-120deg); font-size: 1.9rem; opacity: 0.20;">dev ki rani indrani</span>
-        <span class="name-text" style="top: 33%; left: 18%; transform: rotate(15deg); font-size: 2.1rem; opacity: 0.23;">kuchipuku</span>
-        <span class="name-text" style="top: 62%; left: 52%; transform: rotate(-85deg); font-size: 1.8rem; opacity: 0.21;">kuchipuku</span>
-        <span class="name-text" style="top: 95%; left: 72%; transform: rotate(140deg); font-size: 2rem; opacity: 0.24;">kuchipuku</span>
+        <span class="name-text" style="top: 5%; left: 10%; transform: rotate(-15deg); font-size: 2rem; opacity: 0.22;">Phan Như Thy</span>
+        <span class="name-text" style="top: 15%; left: 80%; transform: rotate(25deg); font-size: 1.5rem; opacity: 0.18;">Đi chôi nò</span>
+        <span class="name-text" style="top: 25%; left: 5%; transform: rotate(180deg); font-size: 1.8rem; opacity: 0.20;">Như</span>
+        <span class="name-text" style="top: 35%; left: 70%; transform: rotate(-45deg); font-size: 2.2rem; opacity: 0.19;">Phan Như Thyyyy</span>
+        <span class="name-text" style="top: 45%; left: 15%; transform: rotate(90deg); font-size: 1.6rem; opacity: 0.23;">Thyyyyyyy</span>
+        <span class="name-text" style="top: 55%; left: 85%; transform: rotate(-120deg); font-size: 2rem; opacity: 0.21;">Nhưưưư Thyyyy</span>
+        <span class="name-text" style="top: 65%; left: 30%; transform: rotate(45deg); font-size: 2.5rem; opacity: 0.25;">Thyyyyyyyy</span>
+        <span class="name-text" style="top: 75%; left: 60%; transform: rotate(-90deg); font-size: 1.4rem; opacity: 0.18;">Đi chôiiii</span>
+        <span class="name-text" style="top: 85%; left: 20%; transform: rotate(160deg); font-size: 1.9rem; opacity: 0.22;">i chôi dới anh ii</span>
+        <span class="name-text" style="top: 10%; left: 45%; transform: rotate(-60deg); font-size: 1.7rem; opacity: 0.20;">Please choose yesssss</span>
+        <span class="name-text" style="top: 20%; left: 25%; transform: rotate(120deg); font-size: 2.1rem; opacity: 0.24;">You can't say no with meeeeee</span>
+        <span class="name-text" style="top: 30%; left: 90%; transform: rotate(-30deg); font-size: 1.5rem; opacity: 0.19;">Đi chôiiii</span>
+        <span class="name-text" style="top: 40%; left: 50%; transform: rotate(75deg); font-size: 2.3rem; opacity: 0.25;">i chôi dới anh ii</span>
+        <span class="name-text" style="top: 50%; left: 8%; transform: rotate(-150deg); font-size: 1.8rem; opacity: 0.21;">Đi chôi dới anh i</span>
+        <span class="name-text" style="top: 60%; left: 75%; transform: rotate(30deg); font-size: 2rem; opacity: 0.23;">Phan Như Thyyy</span>
+        <span class="name-text" style="top: 70%; left: 40%; transform: rotate(-75deg); font-size: 1.6rem; opacity: 0.19;">Như Thy</span>
+        <span class="name-text" style="top: 80%; left: 95%; transform: rotate(135deg); font-size: 2.2rem; opacity: 0.24;">Thyyyyyyyyy</span>
+        <span class="name-text" style="top: 90%; left: 55%; transform: rotate(-105deg); font-size: 1.9rem; opacity: 0.20;">Đi chôiiii</span>
+        <span class="name-text" style="top: 8%; left: 65%; transform: rotate(60deg); font-size: 2.4rem; opacity: 0.25;">Dới anh ii</span>
+        <span class="name-text" style="top: 18%; left: 35%; transform: rotate(-45deg); font-size: 1.7rem; opacity: 0.18;">Hihi</span>
+        <span class="name-text" style="top: 28%; left: 12%; transform: rotate(150deg); font-size: 2.1rem; opacity: 0.22;">Đi chôi dới anh i</span>
+        <span class="name-text" style="top: 38%; left: 88%; transform: rotate(-90deg); font-size: 1.5rem; opacity: 0.20;">Hihi</span>
+        <span class="name-text" style="top: 48%; left: 42%; transform: rotate(45deg); font-size: 2rem; opacity: 0.23;">Hello</span>
+        <span class="name-text" style="top: 58%; left: 22%; transform: rotate(-165deg); font-size: 1.8rem; opacity: 0.19;">Please choose yesssss</span>
+        <span class="name-text" style="top: 68%; left: 78%; transform: rotate(105deg); font-size: 2.3rem; opacity: 0.24;">You can't say no with meeeeee</span>
+        <span class="name-text" style="top: 33%; left: 18%; transform: rotate(15deg); font-size: 2.1rem; opacity: 0.23;">Đi chôi dới anh iii</span>
+        <span class="name-text" style="top: 62%; left: 52%; transform: rotate(-85deg); font-size: 1.8rem; opacity: 0.21;">Please choose yesssss</span>
+        <span class="name-text" style="top: 95%; left: 72%; transform: rotate(140deg); font-size: 2rem; opacity: 0.24;">You can't say no with meeeeee</span>
         <!-- Bottom Left Area Fill -->
-        <span class="name-text" style="top: 82%; left: 8%; transform: rotate(-25deg); font-size: 2.2rem; opacity: 0.24;">Peru</span>
-        <span class="name-text" style="top: 92%; left: 15%; transform: rotate(45deg); font-size: 1.9rem; opacity: 0.22;">sweetheart</span>
-        <span class="name-text" style="top: 87%; left: 3%; transform: rotate(-135deg); font-size: 1.7rem; opacity: 0.20;">indru</span>
-        <span class="name-text" style="top: 76%; left: 12%; transform: rotate(80deg); font-size: 2.4rem; opacity: 0.25;">mera pyaar..</span>
-        <span class="name-text" style="top: 94%; left: 5%; transform: rotate(-60deg); font-size: 2rem; opacity: 0.23;">kuchipuku</span>
+        <span class="name-text" style="top: 82%; left: 8%; transform: rotate(-25deg); font-size: 2.2rem; opacity: 0.24;">Hello</span>
+        <span class="name-text" style="top: 92%; left: 15%; transform: rotate(45deg); font-size: 1.9rem; opacity: 0.22;">Give me a chance</span>
+        <span class="name-text" style="top: 87%; left: 3%; transform: rotate(-135deg); font-size: 1.7rem; opacity: 0.20;">Thyyyy</span>
+        <span class="name-text" style="top: 76%; left: 12%; transform: rotate(80deg); font-size: 2.4rem; opacity: 0.25;">Phan Như Thy</span>
     </div>
     
     <!-- Floating Hearts Background -->
@@ -75,10 +71,11 @@
                 <span class="emoji">🥰</span>
             </div>
             <h1 class="title">
-                Will You Be My<br>
-                <span class="highlight">Valentine?</span>
+                Will You<br>
+                <span class="highlight">Hangout</span>
+                With me?
             </h1>
-            <p class="subtitle">I promise to make every day special ✨</p>
+            <p class="subtitle">I promise this will be a special day of your life ✨</p>
             
             <div class="button-container">
                 <button class="yes-button" id="yesButton">
@@ -100,123 +97,69 @@
                     <span class="emoji dancing">👩‍❤️‍👨</span>
                 </div>
                 <h1 class="title success-title">
-                    <span class="highlight">PERU!</span>
+                    <span class="highlight">Phan Như Thyyyyy!</span>
                 </h1>
-                <h2 class="success-message">I knew you'd say yes!</h2>
+                <h2 class="success-message" id="successMessage">I knew you'd say yes!</h2>
                 <p class="success-text">
-                    You just made me the happiest person alive! 💕<br>
-                    I can't wait to spend this Valentine's Day with you!
+                    Now choose the plan for our hangout.
                 </p>
-                
-                <!-- Romantic Quote -->
-                <div class="romantic-quote">
-                    <p class="quote-text">"From office corridors to midnight scooty rides under the stars... From sharing dumplings in Indiranagar to dreaming of Prague together... From our long walks exploring the city to that magical kiss under the tree... Every moment with you feels like home. Your touch, your smile, your presence — they're my favorite adventure. You're not just my senior at work, you're my partner in life, my 3 AM companion, my forever."</p>
-                    <p class="quote-author">- Your Dev, Forever Yours 💕</p>
-                </div>
-                
-                <!-- Polaroid Photo Gallery -->
-                <div class="photo-gallery">
-                    <h3 class="gallery-title">Our Love Story 💕</h3>
-                    <p class="gallery-subtitle">Tap the photos to see the magic ✨</p>
-                    
-                    <div class="polaroid-container">
-                        <!-- Photo 1: My Peru -->
-                        <div class="polaroid" style="transform: rotate(-5deg);">
-                            <div class="polaroid-inner">
-                                <div class="polaroid-front">
-                                    <img src="photo4.jpeg" alt="Us">
-                                    <div class="polaroid-caption">My Peru 💕</div>
-                                </div>
-                                <div class="polaroid-back">
-                                    <p class="back-message">Every moment with you is magical ✨</p>
-                                </div>
-                            </div>
+
+                <div class="date-options">
+                    <div class="option-section">
+                        <h3 class="option-title">First, what should we eat?</h3>
+                        <div class="choice-grid" id="foodChoices">
+                            <button class="choice-card selected" type="button" data-choice="Phở">Phở</button>
+                            <button class="choice-card" type="button" data-choice="Bún bò">Bún bò</button>
+                            <button class="choice-card" type="button" data-choice="Cơm tấm">Cơm tấm</button>
+                            <button class="choice-card" type="button" data-choice="Other">Other</button>
                         </div>
-                        
-                        <!-- Photo 2: Darlingghhh -->
-                        <div class="polaroid" style="transform: rotate(3deg);">
-                            <div class="polaroid-inner">
-                                <div class="polaroid-front">
-                                    <img src="photo2.jpeg" alt="Us">
-                                    <div class="polaroid-caption">Darlingghhh 💖</div>
-                                </div>
-                                <div class="polaroid-back">
-                                    <p class="back-message">You make my heart smile 😊💕</p>
-                                </div>
-                            </div>
+                        <input class="other-food-input" id="otherFoodInput" type="text" placeholder="Tell me what you want..." aria-label="Other food option">
+                    </div>
+
+                    <div class="option-section">
+                        <h3 class="option-title">Then we can...</h3>
+                        <div class="choice-grid" id="activityChoices">
+                            <button class="choice-card selected" type="button" data-choice="đi dạo">Đi dạo</button>
+                            <button class="choice-card" type="button" data-choice="xem phim">Xem phim</button>
+                            <button class="choice-card" type="button" data-choice="cà phê">Cà phê</button>
+                            <button class="choice-card" type="button" data-choice="Other">Other</button>
                         </div>
-                        
-                        <!-- Photo 3: Mera Babyyyy -->
-                        <div class="polaroid" style="transform: rotate(-8deg);">
-                            <div class="polaroid-inner">
-                                <div class="polaroid-front">
-                                    <img src="photo3.jpeg" alt="Us">
-                                    <div class="polaroid-caption">Mera Babyyyy 🥰</div>
-                                </div>
-                                <div class="polaroid-back">
-                                    <p class="back-message">Forever & always yours 💍</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Photo 4: Sweetheart -->
-                        <div class="polaroid" style="transform: rotate(6deg);">
-                            <div class="polaroid-inner">
-                                <div class="polaroid-front">
-                                    <img src="photo6.jpeg" alt="Us">
-                                    <div class="polaroid-caption">Sweetheart 💗</div>
-                                </div>
-                                <div class="polaroid-back">
-                                    <p class="back-message">My favorite adventure 🌍💕</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Photo 5: Kuchipuku -->
-                        <div class="polaroid" style="transform: rotate(-4deg);">
-                            <div class="polaroid-inner">
-                                <div class="polaroid-front">
-                                    <img src="photo5.jpeg" alt="Us">
-                                    <div class="polaroid-caption">Kuchipuku 🌸</div>
-                                </div>
-                                <div class="polaroid-back">
-                                    <p class="back-message">You're my everything ❤️✨</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Photo 6: Dev ki Rani Indrani -->
-                        <div class="polaroid" style="transform: rotate(7deg);">
-                            <div class="polaroid-inner">
-                                <div class="polaroid-front">
-                                    <img src="photo1.jpeg" alt="Us">
-                                    <div class="polaroid-caption">Dev ki Rani Indrani 👑</div>
-                                </div>
-                                <div class="polaroid-back">
-                                    <p class="back-message">My queen, my love 💖👑</p>
-                                </div>
-                            </div>
+                        <input class="other-food-input" id="otherActivityInput" type="text" placeholder="Tell me what else you want to do..." aria-label="Other activity option">
+                    </div>
+
+
+                    <div class="option-section">
+                        <h3 class="option-title">When should we go?</h3>
+                        <div class="schedule-grid">
+                            <label class="schedule-field">
+                                <span>Date</span>
+                                <input id="datePlanInput" type="date" required>
+                            </label>
+                            <label class="schedule-field">
+                                <span>Time</span>
+                                <input id="timePlanInput" type="time" required>
+                            </label>
                         </div>
                     </div>
+                    <p class="date-summary" id="dateSummary">Plan: Phở, then đi dạo.</p>
                 </div>
-                
-                <!-- Special Featured Video -->
-                <div class="featured-video-section">
-                    <h3 class="video-title">Our Special Moment 💃🕺</h3>
-                    <div class="video-polaroid">
-                        <div class="video-polaroid-inner">
-                            <video id="dancingVideo" controls playsinline poster="">
-                                <source src="dancing-video.mp4" type="video/mp4">
-                            </video>
-                            <div class="video-caption">Our Dance Together 💕</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <button class="play-again-button" id="playAgainButton">
+                <button class="submit-plan-button" id="submitPlanButton" type="button">
+                    <span>Let your boyfriend know your plan!!!</span>
+                </button>
+                <button class="play-again-button" id="playAgainButton" style="display: none">
                     <span>Go On Peru, Try Clicking 'No' 😈</span>
                 </button>
             </div>
+        </div>
+    </div>
+
+    <div class="success-popup" id="successPopup" aria-hidden="true">
+        <div class="success-popup-card" role="dialog" aria-modal="true" aria-labelledby="successPopupTitle">
+            <h2 id="successPopupTitle">Plan saved!</h2>
+            <p>Your answer has been sent successfully to your boyfriend.</p>
+            <button class="popup-ok-button" id="popupOkButton" type="button">
+                <span>Missing him?</span>
+            </button>
         </div>
     </div>
 
